@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb_container
+    ports:
+      - "27017:27017" # Ánh xạ cổng 27017 từ container ra máy thật
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
